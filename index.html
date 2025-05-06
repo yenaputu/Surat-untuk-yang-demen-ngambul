@@ -12,32 +12,36 @@
       background: linear-gradient(to bottom right, #ffe0ec, #fff9f9);
       color: #444;
       text-align: center;
+      overflow-x: hidden;
     }
+
     .heart {
       font-size: 50px;
       animation: heartbeat 1.5s infinite;
       position: fixed;
-      top: 20px;
+      top: 10px;
       left: 50%;
       transform: translateX(-50%);
-      z-index: 2;
-      opacity: 0.15; /* transparan */
-      pointer-events: none; /* biar tidak ganggu interaksi */
+      z-index: 10;
     }
+
     @keyframes heartbeat {
       0%, 100% { transform: translateX(-50%) scale(1); }
       50% { transform: translateX(-50%) scale(1.3); }
     }
+
     h1 {
       font-family: 'Great Vibes', cursive;
       font-size: 48px;
       margin-bottom: 10px;
       color: #d63384;
     }
+
     p.intro {
       font-size: 18px;
       margin-bottom: 40px;
     }
+
     .images img {
       width: 250px;
       height: auto;
@@ -45,6 +49,7 @@
       border-radius: 16px;
       box-shadow: 0 6px 20px rgba(0,0,0,0.2);
     }
+
     .surat {
       background: white;
       max-width: 720px;
@@ -60,17 +65,7 @@
       position: relative;
       z-index: 1;
     }
-    .surat h2 {
-      text-align: center;
-      font-family: 'Great Vibes', cursive;
-      font-size: 36px;
-      color: #e83e8c;
-      margin-bottom: 20px;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+
     .surat::before {
       content: '💝    💝     💝\A   💝      💝\A     💝   💝\A 💝     💝     💝';
       position: absolute;
@@ -83,12 +78,58 @@
       pointer-events: none;
       z-index: 0;
     }
+
+    .surat h2 {
+      text-align: center;
+      font-family: 'Great Vibes', cursive;
+      font-size: 36px;
+      color: #e83e8c;
+      margin-bottom: 20px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .falling-loves {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      pointer-events: none;
+      z-index: 5;
+    }
+
+    .falling-loves span {
+      position: absolute;
+      top: -50px;
+      font-size: 32px;
+      animation: fall 3.5s ease-in forwards;
+      opacity: 0.9;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+    }
   </style>
 </head>
 <body>
 
-  <!-- Animasi Hati -->
-  <div class="heart">❤️</div>
+  <!-- Emoji Love Falling -->
+  <div class="falling-loves">
+    <span style="left: 5%; animation-delay: 0s;">❤️</span>
+    <span style="left: 15%; animation-delay: 0.5s;">❤️</span>
+    <span style="left: 25%; animation-delay: 1s;">❤️</span>
+    <span style="left: 35%; animation-delay: 1.5s;">❤️</span>
+    <span style="left: 45%; animation-delay: 0.3s;">❤️</span>
+    <span style="left: 55%; animation-delay: 0.8s;">❤️</span>
+    <span style="left: 65%; animation-delay: 1.2s;">❤️</span>
+    <span style="left: 75%; animation-delay: 1.7s;">❤️</span>
+    <span style="left: 85%; animation-delay: 0.6s;">❤️</span>
+    <span style="left: 95%; animation-delay: 1.4s;">❤️</span>
+  </div>
 
   <!-- Judul & Intro -->
   <h1>Untuk yang Demen Ngambul</h1>
