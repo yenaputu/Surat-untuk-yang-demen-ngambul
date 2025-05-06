@@ -39,9 +39,9 @@
 </head>
 <body>
   <div class="collage">
-    <img src="foto1.jpg" alt="Foto Romantis 1">
+    <img src="4.jpg" alt="Foto Romantis 1">
     <div class="heart">♥</div>
-    <img src="foto2.jpg" alt="Foto Romantis 2">
+    <img src="WhatsApp.jpg" alt="Foto Romantis 2">
   </div>
 </body>
 </html>
