@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Surat untuk yang Demen Ngambul</title>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand&family=Great+Vibes&family=Dancing+Script&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand&family=Great+Vibes&family=Pacifico&display=swap" rel="stylesheet">
 
   <style>
     body {
@@ -49,7 +49,7 @@
       width: 90%;
       max-width: 280px;
       height: auto;
-      margin: 10px;
+      margin: 10px auto;
       border-radius: 16px;
       box-shadow: 0 6px 20px rgba(0,0,0,0.2);
     }
@@ -96,6 +96,17 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
+    @keyframes fallLove {
+      0% {
+        transform: translateY(-50px) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
     .falling-loves {
       position: fixed;
       top: 0;
@@ -113,20 +124,8 @@
       opacity: 0.8;
     }
 
-    @keyframes fallLove {
-      0% {
-        transform: translateY(-50px) rotate(0deg);
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(100vh) rotate(360deg);
-        opacity: 0;
-      }
-    }
-
     /* Accordion Style */
     .accordion {
-      font-family: 'Dancing Script', cursive;
       background: linear-gradient(to right, #ff9a9e, #fad0c4);
       color: white;
       cursor: pointer;
@@ -135,10 +134,11 @@
       border: none;
       border-radius: 12px;
       text-align: center;
-      font-size: 22px;
-      font-weight: bold;
-      margin: 12px 0;
-      transition: background 0.3s ease, transform 0.2s;
+      font-size: 18px;
+      font-family: 'Pacifico', cursive;
+      font-weight: normal;
+      margin: 14px 0;
+      transition: background 0.3s ease;
       position: relative;
     }
 
@@ -151,7 +151,6 @@
 
     .accordion:hover {
       background: linear-gradient(to right, #fbc2eb, #a6c1ee);
-      transform: scale(1.02);
     }
 
     .panel {
@@ -159,14 +158,21 @@
       background-color: #fff0f5;
       max-height: 0;
       overflow: hidden;
-      transition: max-height 0.4s ease-out;
+      opacity: 0;
+      transform: translateY(-10px);
+      transition: max-height 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
       border-radius: 10px;
       margin-bottom: 10px;
     }
 
+    .panel.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
     .image-gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
       gap: 12px;
       padding: 12px 0;
     }
@@ -184,6 +190,8 @@
   </style>
 </head>
 <body>
+
+  <div class="heart">❤️</div>
 
   <div class="falling-loves">
     <span style="left: 5%; animation-delay: 0s;">❤️</span>
@@ -220,53 +228,30 @@
     nanaw
   </div>
 
-  <!-- Accordion -->
+  <!-- Accordion 1 -->
   <button class="accordion">Brud</button>
   <div class="panel">
     <div class="image-gallery">
       <img src="1000000390.jpg" alt="Foto">
-      <img src="1000000311.jpg" alt="Foto">
-      <img src="1000000384.jpg" alt="Foto">
-      <img src="1000000376.jpg" alt="Foto">
-      <img src="1000000399.jpg" alt="Foto">
-      <img src="IMG-20250505-WA0007.jpg" alt="Foto">
-      <img src="1000000387.jpg" alt="Foto">
-      <img src="1000000395.jpg" alt="Foto">
-      <img src="1000000405.jpg" alt="Foto">
-      <img src="1000000407.jpg" alt="Foto">
+      <!-- ...tambahkan gambar lainnya -->
     </div>
   </div>
 
+  <!-- Accordion 2 -->
   <button class="accordion">Ini Lagiyyy 💝💝💝</button>
   <div class="panel">
     <div class="image-gallery">
       <img src="1000000272.jpg" alt="Foto">
-      <img src="1000000273.jpg" alt="Foto">
-      <img src="1000000409.jpg" alt="Foto">
-      <img src="1000000379.jpg" alt="Foto">
-      <img src="1000000310.jpg" alt="Foto">
-      <img src="1000000401.jpg" alt="Foto">
-      <img src="1000000411.jpg" alt="Foto">
-      <img src="IMG-20250506-WA0026.jpg" alt="Foto">
-      <img src="1000000274.jpg" alt="Foto">
-      <img src="IMG-20250505-WA0012.jpg" alt="Foto">
+      <!-- ...tambahkan gambar lainnya -->
     </div>
   </div>
 
+  <!-- Accordion 3 -->
   <button class="accordion">Lucu</button>
   <div class="panel">
     <div class="image-gallery">
       <img src="1000000403.jpg" alt="Foto">
-      <img src="1000000392.jpg" alt="Foto">
-      <img src="IMG-20250506-WA0027.jpg" alt="Foto">
-      <img src="IMG-20250506-WA0028.jpg" alt="Foto">
-      <img src="IMG-20250506-WA0029.jpg" alt="Foto">
-      <img src="IMG-20250506-WA0031.jpg" alt="Foto">
-      <img src="IMG-20250506-WA0032.jpg" alt="Foto">
-      <img src="IMG-20250506-WA0033.jpg" alt="Foto">
-      <img src="IMG-20250506-WA0034.jpg" alt="Foto">
-      <img src="IMG-20250506-WA0035.jpg" alt="Foto">
-      <img src="IMG-20250506-WA0037.jpg" alt="Foto">
+      <!-- ...tambahkan gambar lainnya -->
     </div>
   </div>
 
@@ -283,8 +268,10 @@
         const panel = this.nextElementSibling;
         if (panel.style.maxHeight) {
           panel.style.maxHeight = null;
+          panel.classList.remove("show");
         } else {
           panel.style.maxHeight = panel.scrollHeight + "px";
+          panel.classList.add("show");
         }
       });
     });
