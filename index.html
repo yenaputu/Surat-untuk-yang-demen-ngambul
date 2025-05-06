@@ -12,7 +12,10 @@
       background: linear-gradient(to bottom right, #ffe0ec, #fff9f9);
       color: #444;
       text-align: center;
+      overflow: hidden;
+      position: relative;
     }
+
     .heart {
       font-size: 50px;
       animation: heartbeat 1.5s infinite;
@@ -22,27 +25,40 @@
       transform: translateX(-50%);
       z-index: 10;
     }
+
     @keyframes heartbeat {
       0%, 100% { transform: translateX(-50%) scale(1); }
       50% { transform: translateX(-50%) scale(1.3); }
     }
+
     h1 {
       font-family: 'Great Vibes', cursive;
       font-size: 48px;
       margin-bottom: 10px;
       color: #d63384;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     }
+
     p.intro {
       font-size: 18px;
       margin-bottom: 40px;
+      color: #666;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
     }
+
     .images img {
       width: 250px;
       height: auto;
       margin: 10px;
       border-radius: 16px;
       box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
     }
+
+    .images img:hover {
+      transform: scale(1.05);
+    }
+
     .surat {
       background: white;
       max-width: 720px;
@@ -56,20 +72,66 @@
       white-space: pre-wrap;
       animation: fadeIn 1.5s ease-in-out;
     }
+
     .surat h2 {
       text-align: center;
       font-family: 'Great Vibes', cursive;
       font-size: 36px;
       color: #e83e8c;
       margin-bottom: 20px;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
     }
+
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
+
+    /* Animasi Love Emojis */
+    @keyframes fall {
+      0% { transform: translateY(-100px); opacity: 1; }
+      100% { transform: translateY(100vh); opacity: 0; }
+    }
+
+    .love-heart {
+      position: absolute;
+      font-size: 30px;
+      animation: fall linear infinite;
+      animation-duration: 5s;
+    }
+
+    /* Partikel berbentuk love di latar belakang */
+    .love-particle {
+      position: absolute;
+      font-size: 40px;
+      animation: fall 3s infinite;
+      opacity: 0.8;
+    }
+
+    /* Background Animasi */
+    @keyframes backgroundMovement {
+      0% { background-position: 0 0; }
+      100% { background-position: 100% 100%; }
+    }
+
+    .background-animation {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://www.transparenttextures.com/patterns/linen.png') repeat;
+      animation: backgroundMovement 10s linear infinite;
+      z-index: -1;
+      opacity: 0.1;
+    }
+
   </style>
 </head>
 <body>
+
+  <!-- Background Animasi -->
+  <div class="background-animation"></div>
 
   <!-- Animasi Hati -->
   <div class="heart">❤️</div>
@@ -104,6 +166,23 @@
     <source src="https://cdn.pixabay.com/download/audio/2022/10/18/audio_7e232ef609.mp3?filename=romantic-love-story-112831.mp3" type="audio/mp3">
     Browser kamu tidak mendukung audio.
   </audio>
+
+  <!-- Love Emoji Falling -->
+  <div class="love-heart" style="left: 10%; animation-delay: 0s;">❤️</div>
+  <div class="love-heart" style="left: 20%; animation-delay: 2s;">❤️</div>
+  <div class="love-heart" style="left: 30%; animation-delay: 4s;">❤️</div>
+  <div class="love-heart" style="left: 40%; animation-delay: 1s;">❤️</div>
+  <div class="love-heart" style="left: 50%; animation-delay: 3s;">❤️</div>
+  <div class="love-heart" style="left: 60%; animation-delay: 5s;">❤️</div>
+  <div class="love-heart" style="left: 70%; animation-delay: 0s;">❤️</div>
+  <div class="love-heart" style="left: 80%; animation-delay: 2s;">❤️</div>
+  <div class="love-heart" style="left: 90%; animation-delay: 4s;">❤️</div>
+
+  <!-- Partikel Love di Latar Belakang -->
+  <div class="love-particle" style="top: 10%; left: 15%; animation-duration: 3s; animation-delay: 1s;">❤️</div>
+  <div class="love-particle" style="top: 20%; left: 25%; animation-duration: 4s; animation-delay: 2s;">❤️</div>
+  <div class="love-particle" style="top: 30%; left: 35%; animation-duration: 5s; animation-delay: 3s;">❤️</div>
+  <div class="love-particle" style="top: 50%; left: 45%; animation-duration: 6s; animation-delay: 1s;">❤️</div>
 
 </body>
 </html>
