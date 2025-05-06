@@ -2,46 +2,91 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Kolase Romantis</title>
+  <title>Surat untuk yang Demen Ngambul</title>
   <style>
     body {
-      background-color: #fefefe;
-      font-family: sans-serif;
-      display: flex;
-      justify-content: center;
-      padding: 40px;
+      font-family: 'Arial', sans-serif;
+      background-color: #fff0f5;
+      margin: 0;
+      padding: 30px;
+      text-align: center;
+      overflow-x: hidden;
     }
-    .collage {
-      display: flex;
-      flex-direction: row;
-      gap: 20px;
-      background: #fff;
-      padding: 20px;
-      border-radius: 20px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-      position: relative;
-    }
-    .collage img {
+    img {
       width: 300px;
       height: auto;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      margin: 10px;
+    }
+    .surat {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #fff;
       border-radius: 12px;
-      object-fit: cover;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      font-size: 18px;
+      line-height: 1.6;
+      color: #333;
+      text-align: left;
+    }
+    .surat h2 {
+      color: #ff6b81;
+      text-align: center;
     }
     .heart {
-      position: absolute;
-      top: 50%;
+      font-size: 50px;
+      color: red;
+      position: fixed;
+      top: 10px;
       left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 48px;
-      color: #ff6b81;
+      transform: translateX(-50%);
+      animation: heartbeat 1.5s infinite;
+      z-index: 999;
+    }
+    @keyframes heartbeat {
+      0%, 100% {
+        transform: translateX(-50%) scale(1);
+      }
+      50% {
+        transform: translateX(-50%) scale(1.4);
+      }
     }
   </style>
 </head>
 <body>
-  <div class="collage">
-    <img src="4.jpg" alt="Foto Romantis 1">
-    <div class="heart">♥</div>
-    <img src="WhatsApp.jpg" alt="Foto Romantis 2">
+
+  <!-- Animasi Hati -->
+  <div class="heart">❤️</div>
+
+  <h1>Untuk yang Demen Ngambul</h1>
+  <p>Dari orang yang paling sayang kamu</p>
+
+  <!-- Gambar -->
+  <img src="4.jpg" alt="Foto 1">
+  <img src="WhatsApp.jpg" alt="Foto 2">
+
+  <!-- Isi Surat -->
+  <div class="surat">
+    <h2>Surat untuk yang Demen Ngambul</h2>
+    <p>
+      Hai kamu yang suka ngambek...<br><br>
+      Aku buat ini karena kamu spesial dan aku sayang banget sama kamu.<br>
+      Maaf kalau kadang aku bikin kamu kesel, tapi beneran aku ga pernah maksud.<br><br>
+      Aku cuma mau kamu tahu, kalau kamu selalu ada di pikiranku.<br>
+      Jangan ngambek lama-lama ya... senyum kamu tuh candu buat aku.<br><br>
+      I love you, selalu.<br><br>
+      Dari aku yang sayang kamu,<br>
+      nanaw
+    </p>
   </div>
+
+  <!-- Musik Romantis -->
+  <audio autoplay loop>
+    <source src="https://cdn.pixabay.com/download/audio/2022/10/18/audio_7e232ef609.mp3?filename=romantic-love-story-112831.mp3" type="audio/mp3">
+    Browser kamu tidak mendukung audio.
+  </audio>
+
 </body>
 </html>
