@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Surat untuk yang Demen Ngambul</title>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand&family=Great+Vibes&family=Dancing+Script&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
     body {
@@ -45,7 +46,8 @@
     }
 
     .images img {
-      width: 250px;
+      width: 90%;
+      max-width: 280px;
       height: auto;
       margin: 10px;
       border-radius: 16px;
@@ -94,17 +96,6 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    @keyframes fallLove {
-      0% {
-        transform: translateY(-50px) rotate(0deg);
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(100vh) rotate(360deg);
-        opacity: 0;
-      }
-    }
-
     .falling-loves {
       position: fixed;
       top: 0;
@@ -122,8 +113,20 @@
       opacity: 0.8;
     }
 
-    /* Accordion Style Baru */
+    @keyframes fallLove {
+      0% {
+        transform: translateY(-50px) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    /* Accordion Style */
     .accordion {
+      font-family: 'Dancing Script', cursive;
       background: linear-gradient(to right, #ff9a9e, #fad0c4);
       color: white;
       cursor: pointer;
@@ -132,10 +135,10 @@
       border: none;
       border-radius: 12px;
       text-align: center;
-      font-size: 18px;
+      font-size: 22px;
       font-weight: bold;
-      margin: 10px 0;
-      transition: background 0.3s ease;
+      margin: 12px 0;
+      transition: background 0.3s ease, transform 0.2s;
       position: relative;
     }
 
@@ -148,6 +151,7 @@
 
     .accordion:hover {
       background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+      transform: scale(1.02);
     }
 
     .panel {
@@ -162,7 +166,7 @@
 
     .image-gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
       gap: 12px;
       padding: 12px 0;
     }
@@ -218,6 +222,7 @@
     nanaw
   </div>
 
+  <!-- Accordion -->
   <button class="accordion">Brud</button>
   <div class="panel">
     <div class="image-gallery">
@@ -267,13 +272,11 @@
     </div>
   </div>
 
-  <!-- Musik -->
   <audio autoplay loop>
     <source src="https://cdn.pixabay.com/download/audio/2022/10/18/audio_7e232ef609.mp3?filename=romantic-love-story-112831.mp3" type="audio/mp3">
     Browser kamu tidak mendukung audio.
   </audio>
 
-  <!-- Script Accordion Baru -->
   <script>
     const acc = document.querySelectorAll(".accordion");
     acc.forEach(btn => {
