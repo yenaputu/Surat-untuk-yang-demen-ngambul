@@ -12,36 +12,32 @@
       background: linear-gradient(to bottom right, #ffe0ec, #fff9f9);
       color: #444;
       text-align: center;
-      overflow-x: hidden;
     }
-
     .heart {
       font-size: 50px;
       animation: heartbeat 1.5s infinite;
       position: fixed;
-      top: 10px;
+      top: 20px;
       left: 50%;
       transform: translateX(-50%);
-      z-index: 10;
+      z-index: 2;
+      opacity: 0.15; /* transparan */
+      pointer-events: none; /* biar tidak ganggu interaksi */
     }
-
     @keyframes heartbeat {
       0%, 100% { transform: translateX(-50%) scale(1); }
       50% { transform: translateX(-50%) scale(1.3); }
     }
-
     h1 {
       font-family: 'Great Vibes', cursive;
       font-size: 48px;
       margin-bottom: 10px;
       color: #d63384;
     }
-
     p.intro {
       font-size: 18px;
       margin-bottom: 40px;
     }
-
     .images img {
       width: 250px;
       height: auto;
@@ -49,7 +45,6 @@
       border-radius: 16px;
       box-shadow: 0 6px 20px rgba(0,0,0,0.2);
     }
-
     .surat {
       background: white;
       max-width: 720px;
@@ -65,7 +60,17 @@
       position: relative;
       z-index: 1;
     }
-
+    .surat h2 {
+      text-align: center;
+      font-family: 'Great Vibes', cursive;
+      font-size: 36px;
+      color: #e83e8c;
+      margin-bottom: 20px;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
     .surat::before {
       content: '💝    💝     💝\A   💝      💝\A     💝   💝\A 💝     💝     💝';
       position: absolute;
@@ -78,59 +83,9 @@
       pointer-events: none;
       z-index: 0;
     }
-
-    .surat h2 {
-      text-align: center;
-      font-family: 'Great Vibes', cursive;
-      font-size: 36px;
-      color: #e83e8c;
-      margin-bottom: 20px;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* Falling hearts */
-    .falling-loves {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      pointer-events: none;
-      z-index: 5;
-    }
-
-    .falling-loves span {
-      position: absolute;
-      top: -50px;
-      font-size: 32px;
-      animation: fall 3s ease-out forwards;
-      opacity: 0.9;
-    }
-
-    @keyframes fall {
-      0% { transform: translateY(0); opacity: 1; }
-      100% { transform: translateY(100vh); opacity: 0; }
-    }
   </style>
 </head>
 <body>
-
-  <!-- Falling love emojis -->
-  <div class="falling-loves">
-    <span style="left: 5%;">❤️</span>
-    <span style="left: 15%;">❤️</span>
-    <span style="left: 25%;">❤️</span>
-    <span style="left: 35%;">❤️</span>
-    <span style="left: 45%;">❤️</span>
-    <span style="left: 55%;">❤️</span>
-    <span style="left: 65%;">❤️</span>
-    <span style="left: 75%;">❤️</span>
-    <span style="left: 85%;">❤️</span>
-    <span style="left: 95%;">❤️</span>
-  </div>
 
   <!-- Animasi Hati -->
   <div class="heart">❤️</div>
